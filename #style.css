@@ -1,0 +1,32 @@
+Table{
+    background-color: gray;
+    border: 5px solid black;
+    width:600px;
+    height:400px;
+    margin: auto;
+}
+td{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.orange {
+    background-color: orange;
+    height: 200px;
+    width: 300px;
+}
+.red {
+    background-color: red;
+    width: 150px;
+}
+.green {
+    background-color: green;
+    width: 150px;
+}
+.blue {
+    background-color: blue;
+    height: 200px;
+    width: 300px;
+}

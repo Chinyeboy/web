@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <style>
+    body {
+      background: darksalmon;
+      background-image: url("dora.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      animation: slide 20s infinite;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @keyframes slide {
+      15% { background-image: url("/pics/baa.jpg"); }
+      33% { background-image: url("/pics/Dora2.jpg"); }
+      66% { background-image: url("/pics/dora.jpg"); }
+      100% { background-image: url("/pics/care.jpg"); }
+    }
+
+    nav {
+      font-size: 20px;
+      width: 100%;
+      height: 10vh;
+      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: xx-large;
+      margin: 2rem auto;
+      text-align: center;
+      color: white;
+    }
+
+    p {
+      font-size: 20px;
+      color: blanchedalmond;
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow"></div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pra3.html">Registration</a></li>
+      <li><a href="pra2.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="footer1">
+    <h2><u>Way of communicating and our location</u></h2>
+    <p><strong>
+      We can get in touch in different ways—for example, through Instagram or telephone.
+      Just click the links below and we shall talk.
+      Also, we are located at Rick's, Arusha, Tanzania.
+      You can also contact us via email.
+
+      <a href="tel:+255687733755">Call Us: +255 687 733 755</a>
+
+    </strong></p>
+  </div>
+
+</body>
+</html>
