@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - Kachenda Daycare</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<style>
+    :root {
+            --primary-color: #2E8B57;
+            --secondary-color: #FFA07A;
+            --light-color: #FFF8DC;
+            --dark-color: #556B2F;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Hero Section with Slideshow */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #000;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+        }
+        
+        .slideshow-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .slideshow-img.active {
+            opacity: 1;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: var(--primary-color) !important;
+            padding: 0.8rem 1rem;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .section-dark {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .section-light {
+            background-color: var(--light-color);
+        }
+        
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+</style>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Kachenda Daycare</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="pra4.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="pra5.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pra6.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="pra3.html">Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="pra4.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Content -->
+  <div class="container mt-5">
+    <h2>About Kachenda Daycare</h2>
+    <p>I am a polite and charming woman who loves living in peace and joy with children. I enjoy teaching, playing, and drawing. Beyond daycare, I’m also a mother and social worker.</p>
+
+    <div class="text-center my-4">
+      <img src="pics/MadamRhoda.jpg" class="img-fluid rounded shadow" alt="Madam Rhoda" width="300">
+      <p><strong>Madam Rhoda – Founder</strong></p>
+    </div>
+
+    <h3>Our Journey</h3>
+    <p>Kachenda Daycare started on June 29, 2020, with 5 children and 3 teachers. With help from VIVA Tanzania and others, we now serve over 15 children with love and care.</p>
+    <img src="pics/VIVATZ.jpg" class="img-fluid rounded shadow mb-4" alt="VIVA TZ">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

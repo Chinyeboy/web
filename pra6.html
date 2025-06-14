@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    :root {
+            --primary-color: #2E8B57;
+            --secondary-color: #FFA07A;
+            --light-color: #FFF8DC;
+            --dark-color: #556B2F;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Hero Section with Slideshow */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #000;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+        }
+        
+        .slideshow-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .slideshow-img.active {
+            opacity: 1;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: var(--primary-color) !important;
+            padding: 0.8rem 1rem;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .section-dark {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .section-light {
+            background-color: var(--light-color);
+        }
+        
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        /* Tables */
+        .pricing-table {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-child me-2"></i>Kachenda Daycare
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pra4.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pra5.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pra6.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pra3.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pra2.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="pricing" class="section section-light">
+        <div class="container">
+            <h2 class="text-center section-title">Our Pricing</h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-table">
+                        <div class="table-responsive">
+                            <table class="table table-bordered mb-0">
+                                <h4 class="text-center mt-3">Baby Under Two Years</h4>
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>INSTALMENT</th>
+                                        <th>AMOUNT(TSH)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>January</td>
+                                        <td>300,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>April</td>
+                                        <td>300,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>July</td>
+                                        <td>300,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>October</td>
+                                        <td>300,000/=</td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td colspan="2"><strong>TOTAL</strong></td>
+                                        <td><strong>1,200,000/=</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-table">
+                        <div class="table-responsive">
+                            <table class="table table-bordered mb-0">
+                                <h4 class="text-center mt-3">Full Day Structure</h4>
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>INSTALMENT</th>
+                                        <th>AMOUNT(TSH)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>January</td>
+                                        <td>205,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>April</td>
+                                        <td>205,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>July</td>
+                                        <td>205,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>October</td>
+                                        <td>205,000/=</td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td colspan="2"><strong>TOTAL</strong></td>
+                                        <td><strong>820,000/=</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-table">
+                        <div class="table-responsive">
+                            <table class="table table-bordered mb-0">
+                                <h4 class="text-center mt-3">Half Day Structure</h4>
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>INSTALMENT</th>
+                                        <th>AMOUNT(TSH)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>January</td>
+                                        <td>105,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>April</td>
+                                        <td>105,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>July</td>
+                                        <td>105,000/=</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>October</td>
+                                        <td>105,000/=</td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td colspan="2"><strong>TOTAL</strong></td>
+                                        <td><strong>420,000/=</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="pra3.html" class="btn btn-primary btn-lg">Enroll Your Child Today</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
